@@ -551,3 +551,133 @@ nav{
 		}
 
 }
+
+.transform:hover{
+	transform: translate(10px);
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+main img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.fot-1{
+    grid-area: foto1;
+}
+
+.fot-2{
+    grid-area: foto2;
+}
+
+.fot-3{
+    grid-area: foto3;
+}
+
+.fot-4{
+    grid-area: foto4;
+}
+
+.fot-5{
+    grid-area: foto5;
+}
+
+.fot-6{
+    grid-area: foto6;
+}
+
+.fot-7{
+    grid-area: foto7;
+}
+
+.fot-8{
+    grid-area: foto8;
+}
+
+.fot-9{
+    grid-area: foto9;
+}
+
+.fot-10{
+    grid-area: foto10;
+}
+
+.fot-11{
+    grid-area: foto11;
+}
+
+.fot-12{
+    grid-area: foto12;
+}
+
+#galeria{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "nav"
+    "header" 
+    "foto1"
+    "foto2"
+    "foto3"
+    "foto4"
+    "foto5"
+    "foto6"
+    "foto7"
+    "foto8"
+    "foto9"
+    "foto10"
+    "foto11"
+    "foto12"
+    "aside"
+    "pie";
+}
+
+@media (min-width:768px){
+    #galeria{
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "nav nav"
+        "header header"
+        "foto1 foto2"
+        "foto3 foto4"
+        "foto5 foto6"
+        "foto7 foto8"
+        "foto9 foto10"
+        "foto11 foto12"
+        "filtro aside"
+        "filtro aside"
+        "filtro pie";
+    }
+}
+
+@media (min-width:1200px){
+    #galeria{
+        grid-template-columns: 40% 40% 20%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "galeria galeria aside"
+        "galeria galeria aside"
+        "galeria galeria aside"
+        "galeria galeria filtro"
+        "galeria galeria filtro"
+        "galeria galeria filtro"
+        "aside aside aside"
+        "pie pie pie";
+        
+    }
+
+    main img{
+        filter: grayscale(3);
+    }
+
+    main img:hover{
+        filter: none;
+    }
+
+}
